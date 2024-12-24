@@ -1,0 +1,7 @@
+Sitemap: https://xpack-dev-tools.github.io/windows-build-tools-xpack/sitemap.xml
+
+User-agent: *
+Disallow: /windows-build-tools-xpack/blog/archive/
+Disallow: /windows-build-tools-xpack/blog/authors/
+Disallow: /windows-build-tools-xpack/blog/page/
+Disallow: /windows-build-tools-xpack/blog/tags/
