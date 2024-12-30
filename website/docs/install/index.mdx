@@ -234,15 +234,16 @@ mandatory to identify the package as an **xpm package**.
 ### Install into the project
 
 The next step is to install the
-**windows-build-tools** package into the project:
+**windows-build-tools** package into the project.
+
+The command to install the **latest** available version of **windows-build-tools** is:
 
 <CodeBlock language="sh"> {
 `xpm install @xpack-dev-tools/windows-build-tools@latest --verbose
 `} </CodeBlock>
 
-This command will install the latest available version.
 
-To install a specific version, mention it explicitly:
+To install a **specific version**, specify it explicitly:
 
 <CodeBlock language="sh"> {
 `xpm install @xpack-dev-tools/windows-build-tools@${customField('version')} --verbose
