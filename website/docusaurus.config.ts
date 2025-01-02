@@ -335,19 +335,29 @@ const config: Config = {
           'aria-label': 'GitHub repository',
         },
         {
-          label: `v${customFields.xpackVersion}`,
+          type: 'dropdown',
+          href: 'https://github.com/xpack-dev-tools/windows-build-tools-xpack/',
+          position: 'right',
+          label: 'GitHub',
+          items: [
+            {
+              label: `windows-build-tools-xpack`,
+              href: `https://github.com/xpack-dev-tools/windows-build-tools-xpack/`,
+            },
+            {
+              label: 'xpack-dev-tools org',
+              href: 'https://github.com/xpack-dev-tools/',
+            },
+            {
+              label: 'xpack org',
+              href: 'https://github.com/xpack/',
+            },
+          ]
+        },
+        {
+          label: `${customFields.xpackVersion}`,
           position: 'right',
           href: `https://github.com/xpack-dev-tools/windows-build-tools-xpack/releases/tag/v${customFields.xpackVersion}`,
-        },
-        {
-          href: 'https://github.com/xpack-dev-tools/',
-          label: 'xpack-dev-tools',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/xpack/',
-          label: 'xpack',
-          position: 'right',
         },
       ],
     },
@@ -408,11 +418,11 @@ const config: Config = {
               href: 'https://github.com/xpack-dev-tools/windows-build-tools-xpack/',
             },
             {
-              label: 'GitHub xpack-dev-tools',
+              label: 'GitHub xpack-dev-tools org',
               href: 'https://github.com/xpack-dev-tools/',
             },
             {
-              label: 'GitHub xpack',
+              label: 'GitHub xpack org',
               href: 'https://github.com/xpack/',
             },
           ],
