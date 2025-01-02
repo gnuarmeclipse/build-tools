@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xpack-dev-tools/windows-build-tools-xpack.git/"
+    "url": "git+https://github.com/xpack-dev-tools/windows-build-tools-xpack.git"
   },
   "bugs": {
-    "url": "https://github.com/xpack-dev-tools/windows-build-tools-xpack/issues/"
+    "url": "https://github.com/xpack-dev-tools/windows-build-tools-xpack/issues"
   },
-  "homepage": "https://github.com/xpack-dev-tools/windows-build-tools-xpack#readme",
+  "homepage": "https://xpack-dev-tools.github.io/windows-build-tools-xpack/",
   "keywords": [
     "xpack",
     "make",
@@ -25,7 +25,7 @@
   "author": {
     "name": "Liviu Ionescu",
     "email": "ilg@livius.net",
-    "url": "https://github.com/ilg-ul/"
+    "url": "https://github.com/ilg-ul"
   },
   "license": "MIT",
   "xpack": {
