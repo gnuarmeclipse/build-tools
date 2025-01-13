@@ -5,8 +5,7 @@
 
 # The xPack Windows Build Tools
 
-A standalone cross-platform (Windows, macOS, GNU/Linux)
-binary distribution of Windows Build Tools,
+A standalone Windows binary distribution of Windows Build Tools,
 intended for reproducible builds.
 
 ## Project documentation
