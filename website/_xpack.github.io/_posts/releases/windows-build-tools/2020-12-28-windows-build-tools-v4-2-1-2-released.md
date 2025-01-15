@@ -84,7 +84,8 @@ There are no functional changes from original projects..
 
 ## Enhancements
 
-- [[#18](https://github.com/xpack-dev-tools/windows-build-tools-xpack/issues/18)]
+- [[#18](https://github.com/xpack-dev-tools/windows-build-tools-xpack/issues/18)]:
+the `cp` command was added.
 
 ## Known problems
 
