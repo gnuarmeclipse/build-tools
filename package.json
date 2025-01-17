@@ -77,7 +77,8 @@
     "liquidjs": "^10.19.1"
   },
   "topConfig": {
-    "longName": "Windows Build Tools"
+    "longName": "Windows Build Tools",
+    "shortName": "windows-build-tools"
   },
   "engines": {
     "node": " >=18.0.0"
