@@ -56,7 +56,19 @@
       "last 5 safari version"
     ]
   },
-  "websiteConfig": {},
+  "websiteConfig": {
+    "customFields": {
+      "programName": "make",
+      "branding": "GNU Make ",
+      "$links": [
+        "https://ftp.gnu.org/gnu/make/",
+        "https://github.com/rmyorston/busybox-w32/tags"
+      ],
+      "makeReleaseDate": "26 Feb 2023",
+      "busyboxTag": "FRP-5398-g89ae34445",
+      "busyboxReleaseDate": "25 Jun 2024"
+    }
+  },
   "engines": {
     "node": ">=18.0"
   }
