@@ -18,10 +18,10 @@ tags:
 # ----- Custom properties -----------------------------------------------------
 
 make_version: "{{upstreamVersion}}"
-make_release_date: "{{customFields.makeReleaseDate}}"
+make_release_date: "{{packageWebsiteConfig.makeReleaseDate}}"
 
-busybox_tag: "{{customFields.busyboxTag}}"
-busybox_date: "{{customFields.busyboxReleaseDate}}"
+busybox_tag: "{{packageWebsiteConfig.busyboxTag}}"
+busybox_date: "{{packageWebsiteConfig.busyboxReleaseDate}}"
 
 version: "{{releaseVersion}}"
 npm_subversion: "1"
