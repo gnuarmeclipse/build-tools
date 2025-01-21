@@ -275,7 +275,7 @@ const config: Config = {
           label: 'GitHub',
           items: [
             {
-              label: `windows-build-tools-xpack`,
+              label: `windows-build-tools-xpack project`,
               href: `https://github.com/xpack-dev-tools/windows-build-tools-xpack/`,
             },
             {
@@ -348,7 +348,7 @@ const config: Config = {
               href: 'https://www.paypal.com/donate/?hosted_button_id=5MFRG9ZRBETQ8',
             },
             {
-              label: 'GitHub windows-build-tools-xpack',
+              label: 'GitHub windows-build-tools-xpack project',
               href: 'https://github.com/xpack-dev-tools/windows-build-tools-xpack/',
             },
             {
