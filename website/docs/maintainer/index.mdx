@@ -165,10 +165,10 @@ update the dependencies in `build-assets/package.json`.
 
 ### Increase the version and update it in the top `package.json`
 
-- determine the version (like <code>{customField('xpackVersion')}</code>)
+- determine the version (like <code>4.4.1-3.1</code>)
 - update the version in top `package.json`
 - use the new version, suffixed by `.pre`,
-like <code>{customField('xpackVersion')}.{customField('npmSubversion')}.pre</code>.
+like <code>4.4.1-3.1.pre</code>.
 
 ### Update the `websiteConfig` in `website/package.json` (if necessary)
 
@@ -192,9 +192,9 @@ the **Increase the version and update VERSION** section.
 
 ### Increase the version and update VERSION
 
-Determine the version (like <code>{customField('xpackVersion')}</code>)
+Determine the version (like <code>4.4.1-3</code>)
 and update the `build-assets/scripts/VERSION` file; the format
-is <code>{customField('xpackVersion')}</code>.
+is <code>4.4.1-3</code>.
 {isXpackSubversionDouble() ?
 'The fourth & fifth numbers are the xPack release number of this version. A sixth' :
 'The fourth number is the xPack release number of this version. A fifth'} number will be added to the version in `package.json` when the package is published to the `npm` server.
@@ -213,7 +213,7 @@ Check GitHub issues and pull requests:
 - https://github.com/xpack-dev-tools/windows-build-tools-xpack/issues
 - https://github.com/xpack-dev-tools/windows-build-tools-xpack/pulls
 
-and fix them; assign them to a milestone (like <code>{customField('xpackVersion')}</code>).
+and fix them; assign them to a milestone (like <code>4.4.1-3</code>).
 
 ### Update `CHANGELOG.md`
 
@@ -251,8 +251,8 @@ to:
 - check if all previous fixed issues are in
 - check the latest commits `xpm run git-log`; if necessary, copy/paste lines,
   group by dates and edit them using the below regular expressions
-- add a new entry like _**\* v{customField('xpackVersion')} prepared**_
-- commit with the message _**prepare v{customField('xpackVersion')}**_
+- add a new entry like _**\* v4.4.1-3 prepared**_
+- commit with the message _**prepare v4.4.1-3**_
 
 
 ### Push the changes to the `xpack-development` branch
@@ -331,7 +331,7 @@ Copy the trees displayed at the end of the test builds and paste to
 - `website/docs/install/_folders-hierarchies-windows.mdx`
 
 If present, replace the actual version
-(like **{customField('upstreamVersion')}**) with the following expression:
+(like **4.4.1**) with the following expression:
 
 ```txt
 ${customField('upstreamVersion')}
@@ -593,7 +593,7 @@ and check the binaries.
 ### Create a new GitHub pre-release
 
 - in `CHANGELOG.md`, add the release date and a message
-  like _**\* v{customField('xpackVersion')} released**_
+  like _**\* v4.4.1-3 released**_
 - commit with the message _**CHANGELOG update**_
 - check and possibly update the `build-assets/templates/body-github-release-liquid.mdx`
 - push the `xpack-development` branch to GitHub
@@ -608,8 +608,8 @@ The workflow result and logs are available from the
 
 The result is a
 [draft pre-release](https://github.com/xpack-dev-tools/windows-build-tools-xpack/releases)
-tagged like **v{customField('xpackVersion')}** (mind the dash in the middle!) and
-named like **xPack Windows Build Tools v{customField('xpackVersion')}** (mind the dash),
+tagged like **v4.4.1-3** (mind the dash in the middle!) and
+named like **xPack Windows Build Tools v4.4.1-3** (mind the dash),
 with all binaries attached.
 
 - edit the draft and be sure it is attached to the `xpack-development` branch (important!)
@@ -637,7 +637,7 @@ xpm run generate-website-blog-post -C ~/Work/xpack-dev-tools/windows-build-tools
 
 - edit the front matter properties
 - select the correct summary
-- commit with the message _**website: blog post release {customField('xpackVersion')} published**_
+- commit with the message _**website: blog post release 4.4.1-3 published**_
 
 ### Update the web install page
 
@@ -669,14 +669,14 @@ xpm run update-package-binaries -C ~/Work/xpack-dev-tools/windows-build-tools-xp
 - compare the SHA sums with those shown by `cat *.sha`
 - check the executable names
 - commit all changes with the message
-  _**package.json: update urls for {customField('xpackVersion')}.{customField('npmSubversion')} release**_
+  _**package.json: update urls for 4.4.1-3.1 release**_
 
 ### Publish on the npmjs.com server
 
 - select the `xpack-development` branch
 - check the latest commits `xpm run git-log`
-- update `CHANGELOG.md`, add a line like _**\* v{customField('xpackVersion')} published on npmjs.com**_
-- commit with the message _**CHANGELOG: publish npm v{customField('xpackVersion')}.{customField('npmSubversion')}**_
+- update `CHANGELOG.md`, add a line like _**\* v4.4.1-3.1 published on npmjs.com**_
+- commit with the message _**CHANGELOG: publish npm v4.4.1-3.1**_
 - `npm pack` and check the content of the archive, which should list
   only the `package.json`, the `README.md`, `LICENSE` and `CHANGELOG.md`;
   possibly adjust `.npmignore`
@@ -684,7 +684,7 @@ xpm run update-package-binaries -C ~/Work/xpack-dev-tools/windows-build-tools-xp
   GitHub release; the fifth number is the npm specific version:
 
 <CodeBlock language="sh"> {
-`npm version ${customField('xpackVersion')}.${customField('npmSubversion')}
+`npm version 4.4.1-3.1
 `} </CodeBlock>
 
 - the commits and the tag should have been pushed by the `postversion` script;
@@ -724,7 +724,7 @@ The tests results are available from the
 When the release is considered stable, promote it as `latest`:
 
 <CodeBlock language="sh"> {
-`npm dist-tag add @xpack-dev-tools/windows-build-tools@${customField('xpackVersion')}.${customField('npmSubversion')} latest
+`npm dist-tag add @xpack-dev-tools/windows-build-tools@4.4.1-3.1 latest
 `} </CodeBlock>
 
 Check the result:
@@ -736,7 +736,7 @@ Check the result:
 In case the release proves problematic and needs to be unpublished:
 
 <CodeBlock language="sh"> {
-`npm unpublish @xpack-dev-tools/windows-build-tools@${customField('xpackVersion')}.${customField('npmSubversion')}
+`npm unpublish @xpack-dev-tools/windows-build-tools@4.4.1-3.1
 `} </CodeBlock>
 
 ### Build the static website locally
@@ -826,7 +826,7 @@ Close those that were addressed.
 
 - in a separate browser windows, open [X/Twitter](https://twitter.com)
 - using the **`@xpack_project`** account
-- paste the release name like _**xPack Windows Build Tools v{customField('xpackVersion')} released**_
+- paste the release name like _**xPack Windows Build Tools v4.4.1-3 released**_
 - paste the link to the blog post
   [release](https://github.com/xpack-dev-tools/windows-build-tools-xpack/releases)
 - click the **Tweet** button
